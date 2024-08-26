@@ -1,16 +1,10 @@
-origin: https://internal.b01lersc.tf
+origin: https://bootcamp.b01lersc.tf
 divisions:
-  open: Open
   purdue: Purdue
 divisionACLs:
   - match: domain
     value: purdue.edu
     divisions:
       - purdue
-      - open
-  - match: any
-    value: ''
-    divisions:
-      - open
 startTime: 0
 endTime: 4111862400000

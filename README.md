@@ -1,8 +1,6 @@
-# bctf
+# bootcamp-ctf
 
-The updated website for b01lers CTF!
-
-This website was heavily inspired by [LA CTF](https://platform.lac.tf/) and the default rCTF frontend.
+A clone of [bctf](https://github.com/ky28059/bctf) to host the b01lers bootcamp CTF.
 
 ### Running locally
 
