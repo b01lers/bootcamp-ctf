@@ -17,6 +17,7 @@ export default async function Header() {
                 endTime={config.data.endTime}
             />
             <p className="mb-2 max-w-3xl text-center text-pretty">
+                {/* TODO */}
                 b01lers CTF is the public competitive CTF hosted by the b01lers CTF team at Purdue University.
                 Join our discord at <a href="https://discord.gg/tBMqujE" target="_blank" rel="noopener noreferrer" className="text-theme-bright hover:underline">discord.gg/tBMqujE</a>{' '}
                 and look out for further info soon!
