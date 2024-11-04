@@ -8,7 +8,7 @@ export default async function Header() {
 
     return (
         <header className="container flex flex-col items-center justify-center h-screen">
-            <div className="relative before:-z-10 before:absolute before:-left-1 before:-bottom-1 before:shadow-[0_0_300px_200px_rgb(251_190_36_/_0.225)] after:-z-10 after:absolute after:-right-1 after:top-20 after:shadow-[0_0_300px_200px_rgb(219_39_119_/_0.225)]">
+            <div className="relative before:-z-10 before:absolute before:-left-1 before:-bottom-1 before:shadow-[0_0_300px_200px_rgb(251_190_36_/_0.225)] after:-z-10 after:absolute after:-right-1 after:top-20 after:shadow-[0_0_300px_200px_rgb(225_29_72_/_0.225)]">
                 <img
                     src="/assets/logo-uwu.png"
                     className="-mb-7 max-h-96"
@@ -28,7 +28,7 @@ export default async function Header() {
             <div className="flex divide-x divide-primary text-sm">
                 <a href="#rules" className="px-4 py-2 uppercase hover:underline">Rules</a>
                 <a href="#prizes" className="px-4 py-2 uppercase hover:underline">Prizes</a>
-                <a href="#sponsors" className="px-4 py-2 uppercase hover:underline">Sponsors</a>
+                {/* <a href="#sponsors" className="px-4 py-2 uppercase hover:underline">Sponsors</a> */}
             </div>
 
             <a href="#rules" className="text-inherit text-4xl mt-6 sm:mt-12 sm:mb-8 text-primary">
