@@ -32,7 +32,7 @@ export default function Timer(props: TimerProps) {
                 00
             </div>
             <p className="text-primary text-sm text-center">
-                b01lers CTF is over!
+                bootcamp CTF is over!
             </p>
         </div>
     );

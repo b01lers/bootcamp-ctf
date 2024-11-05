@@ -6,5 +6,5 @@ divisionACLs:
     value: purdue.edu
     divisions:
       - purdue
-startTime: 0
-endTime: 4111862400000
+startTime: 1731171600000
+endTime: 1731193200000
