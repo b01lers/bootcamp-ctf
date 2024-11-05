@@ -22,7 +22,7 @@ export default async function Header() {
             <p className="mb-2 max-w-3xl text-center text-pretty">
                 b01lers bootcamp CTF is a Purdue-specific CTF hosted by the b01lers CTF team for new members and
                 interested students to sharpen their CTF skills.
-                Join our club discord at <a href="https://discord.gg/tBMqujE" target="_blank" rel="noopener noreferrer" className="text-theme-bright hover:underline">discord.gg/tBMqujE</a>
+                Join our club discord at <a href="https://discord.gg/jrUGtYe" target="_blank" rel="noopener noreferrer" className="text-theme-bright hover:underline">discord.gg/jrUGtYe</a>{' '}
                 for announcements and more!
             </p>
             <div className="flex divide-x divide-primary text-sm">
