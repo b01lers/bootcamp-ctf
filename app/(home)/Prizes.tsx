@@ -3,11 +3,10 @@ import SectionHeader from '@/components/SectionHeader';
 
 
 export default function Prizes() {
-    const openDivisionPrizes = ['$400', '$200', '$100'];
     const purdueDivisionPrizes = [
-        '4x Three Month Tryhackme Premium Vouchers',
-        '4x Two Month Tryhackme Premium Vouchers',
-        '4x One month Tryhackme Premium Vouchers'
+        '4x Binary Ninja license',
+        '4x Binary Ninja license',
+        '4x Binary Ninja license'
     ];
 
     return (
@@ -17,15 +16,6 @@ export default function Prizes() {
             </SectionHeader>
 
             <div className="flex flex-col lg:flex-row gap-4 mb-4">
-                <PrizeTable division="Open">
-                    {openDivisionPrizes.map((p, i) => (
-                        <div className="table-row bg-black/20 divide-x divide-secondary" key={i}>
-                            <div className="table-cell p-2 border-t border-secondary text-right">{i + 1}.</div>
-                            <div className="table-cell px-4 py-2 border-t border-secondary">{p}</div>
-                        </div>
-                    ))}
-                </PrizeTable>
-
                 <PrizeTable division="Purdue">
                     {purdueDivisionPrizes.map((p, i) => (
                         <div className="table-row bg-black/20 divide-x divide-secondary" key={i}>
@@ -36,10 +26,12 @@ export default function Prizes() {
                 </PrizeTable>
             </div>
 
+            {/*
             <p className="text-sm text-primary">
                 Prize transfers will be arranged with Venmo or Cashapp and can only be transferred to an entity in
                 the United States.
             </p>
+            */}
         </>
     )
 }

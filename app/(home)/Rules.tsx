@@ -13,16 +13,11 @@ export default function Rules() {
                     given team may assist in solving a challenge for that team.
                 </li>
                 <li>
-                    Each team must have a valid email address that should serve as the point of contact.
+                    Each team must have a Purdue valid email address that should serve as the point of contact.
                 </li>
                 <li>
-                    For the <strong>Open</strong> division: there is no limit on team size, and teams can be from
-                    anywhere.
-                </li>
-                <li>
-                    For the <strong>Purdue</strong> division: teams must be composed of current Purdue students to be
-                    eligible for prizes, and there is a maximum team size of 4. Sign up with a @purdue.edu email to
-                    gain access to the Purdue division.
+                    This competition is only for current Purdue students, and there is a maximum team size of 4.
+                    Teams must register with a @purdue.edu email.
                 </li>
                 <li>
                     Flags are of the format{' '}
@@ -30,8 +25,8 @@ export default function Rules() {
                     unless otherwise noted on the challenge description. No brute-force guessing flags.
                 </li>
                 <li>
-                    No flag or hint sharing. Do not solicit or accept hints or guidance from any person except through
-                    official support channels.
+                    Feel free to ask for help from admins and other b01lers officers, but flag sharing and any cheating
+                    is prohibited.
                 </li>
                 <li>
                     Do not attempt to attack or interfere with other teams or any servers used in this competition that
