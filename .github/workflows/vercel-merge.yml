@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           teamId: ${{ secrets.ORG_ID }}
-          projectName: internal-ctf
+          projectName: bootcamp-ctf
           envVariableKeys: ADMIN_TOKEN
         env:
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
