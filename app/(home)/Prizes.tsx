@@ -3,7 +3,7 @@ import SectionHeader from '@/components/SectionHeader';
 
 
 export default function Prizes() {
-    const purdueDivisionPrizes = ['$600', '$300', '$100'];
+    const purdueDivisionPrizes = ['$52', '$20', '$12'];
 
     return (
         <>
@@ -11,6 +11,7 @@ export default function Prizes() {
                 Prizes
             </SectionHeader>
 
+            {/*
             <div className="flex flex-col lg:flex-row gap-4 mb-4">
                 <PrizeTable division="Purdue">
                     {purdueDivisionPrizes.map((p, i) => (
@@ -25,6 +26,8 @@ export default function Prizes() {
             <p className="text-sm text-primary">
                 Prize transfers can only be arranged with entities in the United States.
             </p>
+            */}
+            <p className="text-primary">TBD</p>
         </>
     )
 }
