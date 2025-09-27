@@ -37,10 +37,15 @@ export default async function Header() {
                     className="max-h-[80vh] animate-mark-rotate drop-shadow-[0_0px_4px_#ff1e1e]"
                 />
             </div>
+            <img
+                src="/assets/cutout2.png"
+                className="w-72 shadow-xl -rotate-5 -mt-7 mb-2"
+            />
             <p className="mb-2.5 max-w-3xl text-center text-pretty text-sm sm:text-base drop-shadow-md text-white/70">
-                b01lers CTF is the public competitive CTF hosted by the b01lers CTF team at Purdue University.
-                Join our discord at <a href="https://discord.gg/tBMqujE" target="_blank" rel="noopener noreferrer" className="text-white drop-shadow-[0_0_13px_rgb(20_10_0_/_0.6)] font-semibold hover:underline">discord.gg/tBMqujE</a>{' '}
-                and look out for further info soon!
+                b01lers bootcamp CTF is a Purdue-only CTF hosted by the b01lers CTF team for new members and
+                interested students to sharpen their CTF skills.
+                Join our club discord at <a href="https://discord.gg/jrUGtYe" target="_blank" rel="noopener noreferrer" className="text-white drop-shadow-[0_0_13px_rgb(20_10_0_/_0.6)] font-semibold hover:underline">discord.gg/tBMqujE</a>{' '}
+                for announcements and more!
             </p>
             <Timer
                 startTime={config.data.startTime}
