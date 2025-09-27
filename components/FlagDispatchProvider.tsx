@@ -84,18 +84,24 @@ export default function FlagDispatchProvider(props: { children: ReactNode }) {
         <FlagDispatchContext.Provider value={{ rejectFlag, acceptFlag, dispatchNotif }}>
             {Array(6).fill(0).map((_, i) => (
                 <video
+                    hidden
                     className="fixed top-0 w-screen h-screen pointer-events-none z-50 object-cover object-center"
                     ref={appendToRejectVideos}
+                    onPlay={(e) => e.currentTarget.hidden = false}
+                    onEnded={(e) => e.currentTarget.hidden = true}
                     key={i}
                 >
                     <source src={`/assets/videos/failed${i + 1}-safari.mov`} type='video/mp4; codecs="hvc1"' />
                     <source src={`/assets/videos/failed${i + 1}-chrome.webm`} type="video/webm" />
                 </video>
             ))}
-            {Array(4).fill(0).map((_, i) => (
+            {Array(6).fill(0).map((_, i) => (
                 <video
+                    hidden
                     className="fixed top-0 w-screen h-screen pointer-events-none z-50 object-cover object-center"
                     ref={appendToAcceptVideos}
+                    onPlay={(e) => e.currentTarget.hidden = false}
+                    onEnded={(e) => e.currentTarget.hidden = true}
                     key={i}
                 >
                     <source src={`/assets/videos/success${i + 1}-safari.mov`} type='video/mp4; codecs="hvc1"' />
@@ -104,15 +110,21 @@ export default function FlagDispatchProvider(props: { children: ReactNode }) {
             ))}
 
             <video
+                hidden
                 className="fixed top-0 w-screen h-screen pointer-events-none z-50 object-cover object-center"
                 ref={appleBottomJeansRef}
+                onPlay={(e) => e.currentTarget.hidden = false}
+                onEnded={(e) => e.currentTarget.hidden = true}
             >
                 <source src="/assets/videos/special-safari.mov" type='video/mp4; codecs="hvc1"' />
                 <source src="/assets/videos/special-chrome.webm" type="video/webm" />
             </video>
             <video
+                hidden
                 className="fixed top-0 w-screen h-screen pointer-events-none z-50 object-cover object-center"
                 ref={gunRef}
+                onPlay={(e) => e.currentTarget.hidden = false}
+                onEnded={(e) => e.currentTarget.hidden = true}
             >
                 <source src="/assets/videos/special2-safari.mov" type='video/mp4; codecs="hvc1"' />
                 <source src="/assets/videos/special2-chrome.webm" type="video/webm" />

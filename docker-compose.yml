@@ -35,14 +35,14 @@ services:
       - rctf
     volumes:
       - ./data/rctf-postgres:/var/lib/postgresql/data
-  bctf:
-    container_name: bctf-bootcamp
-    build:
-      dockerfile: ./Dockerfile
-      context: .
-    ports:
-      - "9125:3000"
-    restart: always
+#  bctf:
+#    container_name: bctf-bootcamp
+#    build:
+#      dockerfile: ./Dockerfile
+#      context: .
+#    ports:
+#      - "9125:3000"
+#    restart: always
 
 networks:
   rctf: {}

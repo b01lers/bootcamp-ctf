@@ -1,10 +1,13 @@
 'use client'
 
 import { useContext } from 'react';
+import { Reddit_Mono } from 'next/font/google';
 import { DateTime } from 'luxon';
 import { useIsMounted } from '@/hooks/useIsMounted';
 import CurrentTimeContext from '@/contexts/CurrentTimeContext';
 
+
+const martian = Reddit_Mono({ subsets: ['latin'], weight: '500' });
 
 type TimerProps = {
     startTime: number,
@@ -22,7 +25,10 @@ export default function Timer(props: TimerProps) {
     // If the CTF is over
     if (time > ctfEnd) return (
         <div className="mb-6">
-            <div className="bg-black/15 mt-1 text-5xl sm:text-6xl font-medium px-5 py-3 rounded font-mono mb-1">
+            <div
+                className="bg-black/30 mt-1 text-5xl sm:text-6xl font-medium px-5 py-3 rounded font-mono mb-1"
+                style={martian.style}
+            >
                 00
                 <span className="text-primary">:</span>
                 00
@@ -32,7 +38,7 @@ export default function Timer(props: TimerProps) {
                 00
             </div>
             <p className="text-primary text-sm text-center">
-                bootcamp CTF is over!
+                b01lers CTF is over!
             </p>
         </div>
     );
@@ -43,7 +49,10 @@ export default function Timer(props: TimerProps) {
 
     return (
         <div className="mb-6">
-            <div className="bg-black/15 mt-1 text-5xl sm:text-6xl font-medium px-5 py-3 rounded font-mono mb-1">
+            <div
+                className="bg-black/30 mt-1 text-5xl sm:text-6xl font-medium px-5 py-3 rounded font-mono mb-1"
+                style={martian.style}
+            >
                 {!mounted ? '00' : diff.days.toString().padStart(2, '0')}
                 <span className="text-primary">:</span>
                 {!mounted ? '00' : diff.hours.toString().padStart(2, '0')}
@@ -54,9 +63,9 @@ export default function Timer(props: TimerProps) {
             </div>
             <p className="text-primary text-sm text-center">
                 {time > ctfStart ? (
-                    'left until bootcamp CTF ends.'
+                    'left until b01lers CTF ends.'
                 ) : (
-                    'days until bootcamp CTF.'
+                    'days until b01lers CTF.'
                 )}
             </p>
         </div>

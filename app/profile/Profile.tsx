@@ -11,7 +11,9 @@ import { AUTH_COOKIE_NAME, getConfig } from '@/util/config';
 
 
 export default async function Profile(props: ProfileData) {
-    const token = cookies().get(AUTH_COOKIE_NAME)?.value;
+    const c = await cookies();
+    const token = c.get(AUTH_COOKIE_NAME)?.value;
+
     const challs = token
         ? await getChallenges(token)
         : null;
@@ -19,7 +21,7 @@ export default async function Profile(props: ProfileData) {
     const config = await getConfig();
 
     return (
-        <div className="flex flex-col gap-4 flex-grow">
+        <div className="flex flex-col gap-4 grow">
             <ProfileCard
                 {...props}
                 challs={challs?.data}

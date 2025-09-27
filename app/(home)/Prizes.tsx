@@ -3,11 +3,7 @@ import SectionHeader from '@/components/SectionHeader';
 
 
 export default function Prizes() {
-    const purdueDivisionPrizes = [
-        '4x Binary Ninja license',
-        '4x Binary Ninja license',
-        '4x Binary Ninja license'
-    ];
+    const openDivisionPrizes = ['$600', '$300', '$100'];
 
     return (
         <>
@@ -16,8 +12,8 @@ export default function Prizes() {
             </SectionHeader>
 
             <div className="flex flex-col lg:flex-row gap-4 mb-4">
-                <PrizeTable division="Purdue">
-                    {purdueDivisionPrizes.map((p, i) => (
+                <PrizeTable division="Open">
+                    {openDivisionPrizes.map((p, i) => (
                         <div className="table-row bg-black/20 divide-x divide-secondary" key={i}>
                             <div className="table-cell p-2 border-t border-secondary text-right">{i + 1}.</div>
                             <div className="table-cell px-4 py-2 border-t border-secondary">{p}</div>
@@ -26,12 +22,13 @@ export default function Prizes() {
                 </PrizeTable>
             </div>
 
-            {/*
-            <p className="text-sm text-primary">
-                Prize transfers will be arranged with Venmo or Cashapp and can only be transferred to an entity in
-                the United States.
+            <p className="mb-3">
+                There will also be a $100 prize for the top 5 challenge writeups submitted after the competition.
             </p>
-            */}
+
+            <p className="text-sm text-primary">
+                Prize transfers can only be arranged with entities in the United States.
+            </p>
         </>
     )
 }

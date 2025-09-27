@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import {
     PolarAngleAxis,
     PolarGrid,
+    PolarRadiusAxis,
     Radar,
     RadarChart,
     ResponsiveContainer,
@@ -29,14 +30,17 @@ export default function ProfileStats(props: ProfileData & { challs: Challenge[] 
             res[c.category].solves++;
         }
 
-        return Object.entries(res).map(([name, data]) => ({ name, percent: data.solves / data.total }));
+        return Object.entries(res)
+            .sort((a, b) => a[0].localeCompare(b[0]))
+            .map(([name, data]) => ({ name, percent: data.solves / data.total }));
     }, [props.solves]);
 
     return (
-        <ResponsiveContainer height={275} className="flex-none text-xs lg:!w-[350px] ml-4 lg:ml-6 lg:-my-6">
+        <ResponsiveContainer height={275} className="flex-none text-xs lg:w-[350px]! ml-4 lg:ml-6 lg:-my-6">
             <RadarChart data={data}>
                 <PolarGrid opacity={0.5} />
                 <PolarAngleAxis dataKey="name" />
+                <PolarRadiusAxis domain={[0, 1]} axisLine={false} tick={false} />
                 <Radar
                     dataKey="percent"
                     stroke="#c22026"
