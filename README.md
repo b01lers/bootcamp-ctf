@@ -64,3 +64,4 @@ export const AUTH_COOKIE_NAME = 'ctf_clearance';
 - `SOLVES_PAGE_SIZE` — The number of solves to show on each page of the solves modal.
 - `SCOREBOARD_PAGE_SIZE` — The number of teams to show on each page of the scoreboard.
 - `AUTH_COOKIE_NAME` — The name of the auth token cookie.
+
