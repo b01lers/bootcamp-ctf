@@ -1,4 +1,4 @@
-const RCTF_BASE = 'https://bootcamp-ctf.b01lers.com/';
+const RCTF_BASE = 'https://bootcamp-ctf.b01lers.net';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -1,58 +1,22 @@
-import { Hubot_Sans, Martian_Mono } from 'next/font/google';
-import Timer from '@/app/(home)/Timer';
-
-// Utils
-import { getConfig } from '@/util/config';
-
-// Icons
 import { BsChevronCompactDown } from 'react-icons/bs';
-import { AiFillFlag } from 'react-icons/ai';
 
 
-const hubot = Hubot_Sans({ subsets: ['latin'], weight: '700' });
-const martian = Martian_Mono({ subsets: ['latin'], weight: '600' });
-
-export default async function Header() {
-    const config = await getConfig();
-
+export default function Header() {
     return (
-        <header className="relative container flex flex-col items-center justify-center h-screen overflow-hidden">
-            {/*
+        <header className="container flex flex-col items-center justify-center h-screen">
             <img
                 src="/assets/logo-uwu.png"
-                className="-mb-7 max-h-96"
+                alt="b01lers bootcamp CTF"
+                className="max-h-96"
             />
-            */}
-
-            <h1
-                className="flex text-5xl md:text-8xl font-bold text-white/50 bg-clip-text mb-4 mt-16 drop-shadow-md"
-                style={hubot.style}
-            >
-                b<span style={martian.style} className="text-white/65 text-[5.6rem] mt-1.5">01</span>lers CTF
-                <AiFillFlag className="text-theme ml-2" />
-            </h1>
-            <div className="absolute animate-mark-pivot-rotate -z-10 opacity-60">
-                <img
-                    src="/assets/logo-new.png"
-                    className="max-h-[80vh] animate-mark-rotate drop-shadow-[0_0px_4px_#ff1e1e]"
-                />
-            </div>
-            <img
-                src="/assets/cutout2.png"
-                className="w-72 shadow-xl -rotate-5 -mt-7 mb-2"
-            />
-            <p className="mb-2.5 max-w-3xl text-center text-pretty text-sm sm:text-base drop-shadow-md text-white/70">
+            <p className="mb-2 max-w-3xl text-center text-pretty">
                 b01lers bootcamp CTF is a Purdue-only CTF hosted by the b01lers CTF team for new members and
-                interested students to sharpen their CTF skills.
-                Join our club discord at <a href="https://discord.gg/jrUGtYe" target="_blank" rel="noopener noreferrer" className="text-white drop-shadow-[0_0_13px_rgb(20_10_0_/_0.6)] font-semibold hover:underline">discord.gg/tBMqujE</a>{' '}
-                for announcements and more!
+                interested students to sharpen their CTF skills. Check out the{' '}
+                <a href="https://discord.gg/jrUGtYe" target="_blank" rel="noopener noreferrer" className="text-theme-bright hover:underline">Discord</a>{' '}
+                for announcements and enjoy!
             </p>
-            <Timer
-                startTime={config.data.startTime}
-                endTime={config.data.endTime}
-            />
 
-            <a href="#rules" className="absolute inset-x-0 mx-auto w-max bottom-12 text-inherit text-4xl text-primary">
+            <a href="#rules" className="text-inherit text-4xl mt-6 sm:mb-8 text-primary">
                 <BsChevronCompactDown className="animate-bounce" />
                 <span className="sr-only">Jump to Rules</span>
             </a>
