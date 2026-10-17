@@ -21,8 +21,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: {
-        absolute: 'b01lers bootcamp CTF 2025',
-        template: '%s - b01lers bootcamp CTF 2025'
+        absolute: 'b01lers bootcamp CTF 2026',
+        template: '%s - b01lers bootcamp CTF 2026'
     },
     description: 'Bootcamp CTF is a training camp for Purdue students to sharpen their CTF skills.',
 }
