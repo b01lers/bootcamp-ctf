@@ -27,8 +27,13 @@ export default function Prizes() {
                 Prize transfers can only be arranged with entities in the United States.
             </p>
             */}
-            <p className="text-primary">1x Shark Cat Plush (<img src="mofusand.png" style="height: 2rem; width: auto; vertical-align: middle">)
-                for each member of the top 3 teams</p>
+            <p className="text-primary">
+                1x Shark Cat Plush (<img
+                    src="/mofusand.png"
+                    alt="Shark cat plush"
+                    className="inline-block h-8 w-auto align-middle"
+                />) for each member of the top 3 teams
+            </p>
         </>
     )
 }
