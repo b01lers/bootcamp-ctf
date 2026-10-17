@@ -2,6 +2,7 @@ import Header from '@/app/(home)/Header';
 import Sponsors from '@/app/(home)/Sponsors';
 import Rules from '@/app/(home)/Rules';
 import Prizes from '@/app/(home)/Prizes';
+import AIPolicy from './AI';
 
 
 export default async function Home() {
@@ -12,6 +13,7 @@ export default async function Home() {
             <div className="bg-gradient-to-b from-black/40 via-black/30 to-transparent py-16 mb-12 border-t border-tertiary">
                 <div className="px-6 sm:container">
                     <Rules />
+                    <AIPolicy />
                     <Prizes />
                 </div>
             </div>
