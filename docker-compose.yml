@@ -3,19 +3,26 @@ services:
   rctf:
     image: redpwn/rctf:${RCTF_GIT_REF}
     restart: always
-    ports:
-      - '9002:80'
+    expose:
+      - "80"
     networks:
       - rctf
+      - traefuck
     env_file:
       - .env
     environment:
       - PORT=80
     volumes:
       - ./conf.d:/app/conf.d
+      - ./rctf-overrides/challs-get.js:/app/dist/server/api/challs/get.js:ro
     depends_on:
       - redis
       - postgres
+    labels:
+      - "traefik.http.routers.bootcamp2025.rule=Host(`bootcamp-ctf.b01lers.net`)"
+      - "traefik.http.services.bootcamp2025.loadbalancer.server.port=80"
+      - "traefik.http.routers.bootcamp2025.tls={}"
+      - "traefik.http.routers.bootcamp2025.entrypoints=websecure"
   redis:
     image: redis:6.0.6
     restart: always
@@ -46,3 +53,6 @@ services:
 
 networks:
   rctf: {}
+  traefuck:
+    name: traefuck
+    external: true

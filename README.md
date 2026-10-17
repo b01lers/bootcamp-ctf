@@ -54,6 +54,8 @@ docker compose up -d --build
 ```
 
 ### Configuring
+The deployed rCTF challenge-list route is overridden by `rctf-overrides/challs-get.js`, mounted read-only by Docker Compose. Before `startTime`, only authenticated accounts with rCTF's `challsRead` permission can view `/challenges`; regular competitors remain blocked. Admin previews show maximum points and zero solves until the event starts. Flag submissions still follow the configured competition times. This override targets the currently deployed `redpwn/rctf:master` layout; review it when upgrading rCTF.
+
 Further config options can be edited in `/util/config.ts`:
 ```ts
 export const SOLVES_PAGE_SIZE = 10;
